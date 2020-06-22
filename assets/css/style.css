@@ -107,3 +107,76 @@ svg.content-preference-toggle {
   border: none;
   padding: 16px 0;
 }
+
+/* Bottom Nav Bar Mobile */
+.bottom-nav {
+  z-index: 1000;
+  height: 54px;
+}
+.bottom-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span.ic-house {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/ic-house.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+span.ic-search {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/ic-search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+span.ic-bell {
+  fill: #1da1f2;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/ic-bell.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+span.ic-envelope {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/ic-envelope.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Compose Tweet Floating Button */
+.btn-compose-tweet {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(29, 161, 242);
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 72px;
+  right: 18px;
+}
+.btn-compose-tweet:focus {
+  outline: none;
+  border: 2px solid hsl(203, 89%, 75%);
+}
+.ic-compose-tweet {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
