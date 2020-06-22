@@ -3,6 +3,19 @@
   padding: 0;
 }
 
+.collapsing {
+  position: relative;
+  left: 0;
+  overflow: hidden;
+  transition: left 0.35s ease;
+}
+
+.collapse:not(.show) {
+  display: block;
+  left: -100vw;
+}
+
+
 /* Custom Styles */
 .navbar-top {
   height: 54px;
