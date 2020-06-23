@@ -180,3 +180,32 @@ span.ic-envelope {
   width: 24px;
   height: 24px;
 }
+
+/* Tweets Component */
+#tweets-feed {
+  margin-top: 54px;
+}
+
+.tweet-profile-icon {
+  width: 49px;
+  height: 49px;
+}
+
+.tweet-date {
+  font-size: 0.9rem;
+}
+
+/* Reply, Retweet, Like, etc. */
+.tweet-action {
+  width: 18px;
+  height: 18px;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+/* Gives equal width among all items that has this property in a flex row */
+.flex-1 {
+  flex: 1;
+}
