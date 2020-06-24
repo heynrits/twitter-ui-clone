@@ -13,6 +13,7 @@
 .collapse:not(.show) {
   display: block;
   left: -100vw;
+  height: 0;
 }
 
 
