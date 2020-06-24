@@ -184,6 +184,12 @@ span.ic-envelope {
 /* Tweets Component */
 #tweets-feed {
   margin-top: 54px;
+.tweet {
+  padding: 1rem 0;
+}
+
+.tweet:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .tweet-profile-icon {
