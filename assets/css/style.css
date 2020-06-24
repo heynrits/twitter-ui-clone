@@ -20,6 +20,7 @@
 /* Custom Styles */
 .navbar-top {
   height: 54px;
+  background-color: #fff;
 }
 .nav-left {
   display: flex;
@@ -113,6 +114,7 @@ svg.content-preference-toggle {
 .bottom-nav {
   z-index: 1000;
   height: 54px;
+  background-color: #fff;
 }
 .bottom-nav a {
   display: flex;
