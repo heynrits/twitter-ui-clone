@@ -207,6 +207,68 @@
       </div>
     </div>
 
+    <!-- Compose Tweet Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog m-0">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <button
+              type="button"
+              class="end-compose"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <svg
+                class="bi bi-arrow-left-short"
+                width="2em"
+                height="2em"
+                viewBox="0 0 16 16"
+                fill="#1da1f2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.854 4.646a.5.5 0 0 1 0 .708L5.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M4.5 8a.5.5 0 0 1 .5-.5h6.5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </button>
+            <button type="button" class="btn btn-primary py-1 px-3 rounded-pill font-weight-bold send-tweet-btn">Tweet</button>
+          </div>
+          <div class="modal-body d-flex">
+            <img class="tweet-profile-icon mr-2 rounded-circle" src="assets/img/default_profile_400x400.png" alt="User Profile Icon">
+            <div class="flex-grow-1">
+              <textarea name="compose-tweet-body" id="compose-tweet-body" rows="4" class="w-100 py-1 compose-tweet-body border-0" placeholder="What's happening"></textarea>
+              <div class="d-flex align-items-center">
+                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
+                  <img src="assets/img/ic-image.svg" alt="Attach image" class="ic-compose-tweet-advanced">
+                </button>
+                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
+                  <img src="assets/img/ic-gif.svg" alt="Add animated GIF" class="ic-compose-tweet-advanced">
+                </button>
+                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
+                  <img src="assets/img/ic-bar-chart.svg" alt="Create poll" class="ic-compose-tweet-advanced">
+                </button>
+                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
+                  <img src="assets/img/ic-calendar-plus.svg" alt="Schedule tweet" class="ic-compose-tweet-advanced">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="tweets-feed" class="container">
       <!-- A Tweet -->
       <div class="tweet d-flex flex-row align-items-start">
@@ -257,8 +319,7 @@
                 src="assets/img/ic-arrow-left-right.svg"
                 alt="Retweet"
                 class="tweet-action"
-              /></a
-            >
+            /></a>
             <a
               class="flex-1 text-decoration-none text-muted d-flex align-items-center"
               href="#"
@@ -267,8 +328,7 @@
                 src="assets/img/ic-heart.svg"
                 alt="Like"
                 class="tweet-action"
-              /></a
-            >
+            /></a>
             <a
               class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
               href="#"
@@ -595,7 +655,12 @@
       <a class="nav-item nav-link" href="#"
         ><span class="ic-envelope"></span
       ></a>
-      <button class="btn-compose-tweet">
+      <button
+        class="btn-compose-tweet"
+        id="btn-compose-tweet"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
         <svg class="ic-compose-tweet" viewBox="0 0 24 24" fill="#fff">
           <g>
             <path

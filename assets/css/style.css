@@ -184,6 +184,36 @@ span.ic-envelope {
   height: 24px;
 }
 
+/* Compose Tweet */
+.end-compose {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.btn-compose-tweet-advanced {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.btn-compose-tweet-advanced:not(:last-child) {
+  margin-right: 8px;
+}
+
+.ic-compose-tweet-advanced {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.compose-tweet-body:focus {
+  outline:none;
+}
+
+.send-tweet-btn {
+  background-color: rgb(29, 161, 242);
+  font-size: .95rem;
+}
+
 /* Tweets Component */
 #tweets-feed {
   margin-top: 54px;
