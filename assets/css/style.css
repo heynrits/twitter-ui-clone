@@ -406,4 +406,29 @@ span.ic-envelope {
     background-position: center;
     background-size: contain;
   }
+
+  /* Trends */
+  .trending-list {
+    background-color: #f5f8fa;
+    border-radius: 1rem;
+  }
+  .trending-list .list-group-item {
+    background-color: transparent;
+  }
+
+  .trend-list-header {
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+
+  .trend-item {
+    cursor: pointer;
+  }
+  .trend-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  .trend-metadata {
+    font-size: .8rem;
+  }
 }
