@@ -416,12 +416,12 @@ span.ic-envelope {
     background-color: transparent;
   }
 
-  .trend-list-header {
+  .trend-list-header, .who-to-follow-header {
     font-weight: 900;
     font-size: 1.2rem;
   }
 
-  .trend-item {
+  .trend-item, .who-to-follow-item {
     cursor: pointer;
   }
   .trend-item:hover {
@@ -430,5 +430,20 @@ span.ic-envelope {
 
   .trend-metadata {
     font-size: .8rem;
+  }
+
+  /* Who to follow */
+  .who-to-follow-item .profile-icon {
+    width: 49px;
+    height: 49px;
+  }
+
+  .who-to-follow-item .name span {
+    line-height: 1;
+  }
+
+  .who-to-follow-item button:hover {
+    color: #1da1f2;
+    background: rgba(29, 161, 242, 0.3)
   }
 }
