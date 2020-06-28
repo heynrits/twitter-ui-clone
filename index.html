@@ -545,6 +545,68 @@
             </svg>
           </span>
         </div>
+        <!-- Compose Tweet Panel -->
+        <div class="modal-body d-none d-lg-flex border-bottom border-1">
+          <img
+            class="tweet-profile-icon mr-2 rounded-circle"
+            src="assets/img/default_profile_400x400.png"
+            alt="User Profile Icon"
+          />
+          <div class="flex-grow-1">
+            <textarea
+              name="compose-tweet-body"
+              id="compose-tweet-body"
+              rows="2"
+              class="w-100 py-1 compose-tweet-body border-0"
+              placeholder="What's happening"
+            ></textarea>
+            <div class="d-flex align-items-center mt-2">
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-image.svg"
+                  alt="Attach image"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-gif.svg"
+                  alt="Add animated GIF"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-bar-chart.svg"
+                  alt="Create poll"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-calendar-plus.svg"
+                  alt="Schedule tweet"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+              type="button"
+              class="btn btn-primary py-2 px-3 rounded-pill font-weight-bold send-tweet-btn ml-auto"
+            >
+              Tweet
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="py-1 divider d-none d-lg-block"></div>
         <!-- A Tweet -->
         <div class="tweet d-flex flex-row align-items-start">
           <img
