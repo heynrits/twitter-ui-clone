@@ -16,7 +16,6 @@
   height: 0;
 }
 
-
 /* Custom Styles */
 .navbar-top {
   height: 54px;
@@ -88,7 +87,8 @@ svg.content-preference-toggle {
   border: 1px solid rgba(29, 161, 242, 1);
 }
 
-.profile-name, .profile-username {
+.profile-name,
+.profile-username {
   line-height: 1.3;
 }
 
@@ -206,18 +206,18 @@ span.ic-envelope {
 }
 
 .compose-tweet-body:focus {
-  outline:none;
+  outline: none;
 }
 
 .send-tweet-btn {
   background-color: rgb(29, 161, 242);
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 /* Tweets Component */
 #tweets-feed {
-  margin-top: 54px;
   margin-bottom: 54px;
+  box-sizing: content-box;
 }
 
 .tweet {
@@ -260,4 +260,78 @@ span.ic-envelope {
 /* Gives equal width among all items that has this property in a flex row */
 .flex-1 {
   flex: 1;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) /*and (max-width: 1199.98px) */ {
+  .left-column {
+    order: 1;
+    width: 20%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+  .center-column {
+    order: 2;
+    width: 50%;
+  }
+  .right-column {
+    order: 3;
+    width: 30%;
+  }
+
+  #logo {
+    margin-left: -16px;
+  }
+
+  .btn-compose-tweet {
+    width: 100%;
+    height: 49px;
+    background-color: rgb(29, 161, 242);
+    color: #fff;
+    border: none;
+    position: initial;
+  }
+  .btn-compose-tweet:focus {
+    outline: none;
+    border: 2px solid hsl(203, 89%, 75%);
+  }
+
+  #btn-custom-dropup-toggle {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  #custom-dropup-toggle-text:after {
+    display: none;
+  }
+
+  .list-group-item {
+    padding: 0;
+  }
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+  }
+  .sidebar-link:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+  }
+  .sidebar-link:hover .sidebar-link-text {
+    color: #1da1f2;
+  }
+
+  .sidebar-link-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidebar-link-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .sidebar-link-active .sidebar-link-text {
+    color: #1da1f2;
+  }
 }
