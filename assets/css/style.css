@@ -338,7 +338,7 @@ span.ic-envelope {
   }
 
   /* Center Column Styles */
-  .center-column #header-bar {
+  .center-column #header-bar, .right-column #right-header-bar {
     background-color: #fff;
   }
 
