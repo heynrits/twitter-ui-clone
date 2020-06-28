@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- Top and Side bar -->
-    <div class="fixed-top">
+    <div class="sticky-top d-lg-none">
       <nav class="navbar navbar-top">
         <div class="nav-left">
           <button
@@ -216,9 +216,11 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog m-0">
+      <div class="modal-dialog mx-auto mt-4-lg">
         <div class="modal-content">
-          <div class="modal-header d-flex align-items-center justify-content-between">
+          <div
+            class="modal-header d-flex align-items-center justify-content-between"
+          >
             <button
               type="button"
               class="end-compose"
@@ -243,24 +245,63 @@
                 />
               </svg>
             </button>
-            <button type="button" class="btn btn-primary py-1 px-3 rounded-pill font-weight-bold send-tweet-btn">Tweet</button>
+            <button
+              type="button"
+              class="btn btn-primary py-1 px-3 rounded-pill font-weight-bold send-tweet-btn"
+            >
+              Tweet
+            </button>
           </div>
           <div class="modal-body d-flex">
-            <img class="tweet-profile-icon mr-2 rounded-circle" src="assets/img/default_profile_400x400.png" alt="User Profile Icon">
+            <img
+              class="tweet-profile-icon mr-2 rounded-circle"
+              src="assets/img/default_profile_400x400.png"
+              alt="User Profile Icon"
+            />
             <div class="flex-grow-1">
-              <textarea name="compose-tweet-body" id="compose-tweet-body" rows="4" class="w-100 py-1 compose-tweet-body border-0" placeholder="What's happening"></textarea>
+              <textarea
+                name="compose-tweet-body"
+                id="compose-tweet-body"
+                rows="4"
+                class="w-100 py-1 compose-tweet-body border-0"
+                placeholder="What's happening"
+              ></textarea>
               <div class="d-flex align-items-center">
-                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
-                  <img src="assets/img/ic-image.svg" alt="Attach image" class="ic-compose-tweet-advanced">
+                <button
+                  class="border-0 rounded-circle btn-compose-tweet-advanced"
+                >
+                  <img
+                    src="assets/img/ic-image.svg"
+                    alt="Attach image"
+                    class="ic-compose-tweet-advanced"
+                  />
                 </button>
-                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
-                  <img src="assets/img/ic-gif.svg" alt="Add animated GIF" class="ic-compose-tweet-advanced">
+                <button
+                  class="border-0 rounded-circle btn-compose-tweet-advanced"
+                >
+                  <img
+                    src="assets/img/ic-gif.svg"
+                    alt="Add animated GIF"
+                    class="ic-compose-tweet-advanced"
+                  />
                 </button>
-                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
-                  <img src="assets/img/ic-bar-chart.svg" alt="Create poll" class="ic-compose-tweet-advanced">
+                <button
+                  class="border-0 rounded-circle btn-compose-tweet-advanced"
+                >
+                  <img
+                    src="assets/img/ic-bar-chart.svg"
+                    alt="Create poll"
+                    class="ic-compose-tweet-advanced"
+                  />
                 </button>
-                <button class="border-0 rounded-circle btn-compose-tweet-advanced">
-                  <img src="assets/img/ic-calendar-plus.svg" alt="Schedule tweet" class="ic-compose-tweet-advanced">
+                <button
+                  class="border-0 rounded-circle btn-compose-tweet-advanced"
+                >
+                  <img
+                    src="assets/img/ic-calendar-plus.svg"
+                    alt="Schedule tweet"
+                    class="ic-compose-tweet-advanced"
+                  />
                 </button>
               </div>
             </div>
@@ -269,386 +310,817 @@
       </div>
     </div>
 
-    <div id="tweets-feed" class="container">
-      <!-- A Tweet -->
-      <div class="tweet d-flex flex-row align-items-start">
-        <img
-          class="rounded-circle tweet-profile-icon"
-          src="assets/img/default_profile_400x400.png"
-          alt="User's Profile"
-        />
-        <div class="flex-grow-1 d-flex flex-column ml-3">
-          <div class="d-flex">
-            <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
-              <span
-                class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >Dalos Somnen</span
-              >
-              <span
-                class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >@dsmnn2020</span
-              ></span
-            >
-            <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
-            <span class="text-muted flex-shrink-0 mr-2">58s</span>
-            <span class="text-muted flex-shrink-0 ml-auto"
-              ><img src="assets/img/ic-chevron-down.svg" alt="Options"
-            /></span>
-          </div>
-          <div class="my-1">
-            <span>where art thou now?</span>
-          </div>
-          <div class="d-flex align-items-center justify-content-between">
+    <div class="container d-flex justify-content-center">
+      <!-- Desktop Left Sidebar -->
+      <section
+        class="d-none d-lg-flex flex-column left-column border-right border-1"
+      >
+        <ul class="list-group pr-4 mt-4">
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center px-3 mb-2"
+          >
             <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
               href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-chat.svg"
-                alt="Reply"
-                class="tweet-action"
-              />
+              id="logo"
+              class="text-reset text-decoration-none sidebar-link sidebar-link-active rounded-pill"
+            >
+              <!-- Twitter Logo -->
+              <svg fill="#1da1f2" viewBox="0 0 24 24" width="32px">
+                <path
+                  d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"
+                ></path>
+              </svg>
             </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
             <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
               href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-arrow-left-right.svg"
-                alt="Retweet"
-                class="tweet-action"
-            /></a>
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-heart.svg"
-                alt="Like"
-                class="tweet-action"
-            /></a>
-            <a
-              class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
-              href="#"
-              ><img
-                src="assets/img/ic-box-arrow-up.svg"
-                alt="More options"
-                class="tweet-action"
-            /></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- A Tweet -->
-      <div class="tweet d-flex flex-row align-items-start">
-        <img
-          class="rounded-circle tweet-profile-icon"
-          src="assets/img/default_profile_400x400.png"
-          alt="User's Profile"
-        />
-        <div class="flex-grow-1 d-flex flex-column ml-3">
-          <div class="d-flex">
-            <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
-              <span
-                class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >http code guy</span
-              >
-              <span
-                class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >@httpcodeguy</span
-              ></span
+              class="text-reset text-decoration-none sidebar-link sidebar-link-active rounded-pill"
             >
-            <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
-            <span class="text-muted flex-shrink-0 mr-2">9m</span>
-            <span class="text-muted flex-shrink-0 ml-auto"
-              ><img src="assets/img/ic-chevron-down.svg" alt="Options"
-            /></span>
+              <img class="sidebar-link-icon" src="assets/img/ic-house.svg" />
+              <span class="sidebar-link-text ml-3">Home</span>
+            </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <a
+              href="#"
+              class="text-reset text-decoration-none sidebar-link rounded-pill"
+            >
+              <img class="sidebar-link-icon" src="assets/img/ic-hash.svg" />
+              <span class="sidebar-link-text ml-3">Explore</span>
+            </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <a
+              href="#"
+              class="text-reset text-decoration-none sidebar-link rounded-pill"
+            >
+              <img class="sidebar-link-icon" src="assets/img/ic-bell.svg" />
+              <span class="sidebar-link-text ml-3">Notifications</span>
+            </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <a
+              href="#"
+              class="text-reset text-decoration-none sidebar-link rounded-pill"
+            >
+              <img class="sidebar-link-icon" src="assets/img/ic-envelope.svg" />
+              <span class="sidebar-link-text ml-3">Messages</span>
+            </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <a
+              href="#"
+              class="text-reset text-decoration-none sidebar-link rounded-pill"
+            >
+              <img class="sidebar-link-icon" src="assets/img/ic-bookmark.svg" />
+              <span class="sidebar-link-text ml-3">Bookmarks</span>
+            </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <a
+              href="#"
+              class="text-reset text-decoration-none sidebar-link rounded-pill"
+            >
+              <img
+                class="sidebar-link-icon"
+                src="assets/img/ic-file-text.svg"
+              />
+              <span class="sidebar-link-text ml-3">Lists</span>
+            </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <a
+              href="#"
+              class="text-reset text-decoration-none sidebar-link rounded-pill"
+            >
+              <img class="sidebar-link-icon" src="assets/img/ic-person.svg" />
+              <span class="sidebar-link-text ml-3">Profile</span>
+            </a>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <div class="btn-group dropup">
+              <a
+                href="#"
+                class="d-flex justify-content-start align-items-center text-reset text-decoration-none sidebar-link rounded-pill"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  class="sidebar-link-icon"
+                  src="assets/img/ic-three-dots.svg"
+                />
+                <span class="sidebar-link-text ml-3">More</span>
+              </a>
+              <div class="dropdown-menu">
+                <a
+                  href="#"
+                  class="text-reset text-decoration-none dropdown-item"
+                >
+                  <img
+                    class="sidebar-link-icon"
+                    src="assets/img/ic-person-plus.svg"
+                  />
+                  <span class="ml-3">Follower requests</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-reset text-decoration-none dropdown-item"
+                >
+                  <img
+                    class="sidebar-link-icon"
+                    src="assets/img/ic-arrow-up-right-square.svg"
+                  />
+                  <span class="ml-3">Twitter Ads</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-reset text-decoration-none dropdown-item"
+                >
+                  <img
+                    class="sidebar-link-icon"
+                    src="assets/img/ic-graph-up.svg"
+                  />
+                  <span class="ml-3">Analytics</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a
+                  href="#"
+                  class="text-reset text-decoration-none dropdown-item"
+                >
+                  <img class="sidebar-link-icon" src="assets/img/ic-gear.svg" />
+                  <span class="ml-3">Settings and privacy</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-reset text-decoration-none dropdown-item"
+                >
+                  <img
+                    class="sidebar-link-icon"
+                    src="assets/img/ic-question-circle.svg"
+                  />
+                  <span class="ml-3">Help center</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-reset text-decoration-none dropdown-item"
+                >
+                  <img
+                    class="sidebar-link-icon"
+                    src="assets/img/ic-display.svg"
+                  />
+                  <span class="ml-3">Display</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-reset text-decoration-none dropdown-item"
+                >
+                  <span>Log out</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="list-group-item d-flex justify-content-start align-items-center"
+          >
+            <button
+              class="btn-compose-tweet rounded-pill font-weight-bold mt-2"
+              id="btn-compose-tweet"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Tweet
+            </button>
+          </li>
+        </ul>
+        <div class="mt-auto d-flex align-items-start justify-content-between pr-4">
+          <div class="mt-auto d-flex align-items-start">
+            <div class="d-flex justify-content-between mb-2">
+              <a class="round-avatar" href="#"
+                ><span class="profile-icon"></span
+              ></a>
+            </div>
+            <div class="ml-2">
+              <p class="profile-name font-weight-bold mb-0">
+                Heinrich Austria
+              </p>
+              <p class="profile-username text-muted">@heinrich</p>
+            </div>
           </div>
-          <div class="my-1">
-            <span>too bad :&lt;</span>
-            <img
-              class="tweet-image"
-              src="assets/img/error-2129569_640.jpg"
-              alt="too bad"
+          <img src="assets/img/ic-chevron-down.svg" alt="Account Menu">
+        </div>
+      </section>
+
+      <!-- Desktop Right Sidebar -->
+      <section
+        class="d-none d-lg-flex flex-column right-column border-left border-1 pl-4"
+      >
+        <div
+          id="right-header-bar"
+          class="sticky-top px-2 py-2 d-none d-lg-flex align-items-center justify-content-between"
+        >
+          <div id="" class="search-bar input-group rounded-pill w-100 px-2">
+            <input
+              type="text"
+              class="search-input py-2 pl-5 pr-2 w-100 rounded-pill"
+              placeholder="Search Twitter"
             />
           </div>
-          <div class="d-flex align-items-center justify-content-between">
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-chat.svg"
-                alt="Reply"
-                class="tweet-action"
-              />
+        </div>
+
+        <!-- Trending -->
+        <ul class="list-group mt-3 trending-list">
+          <li
+            class="list-group-item p-3 border-bottom border-1 trend-list-header d-flex align-items-center justify-content-between"
+          >
+            <span>Philippines trends</span>
+            <a href="#">
+              <svg
+                class="bi bi-gear"
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+                fill="#1da1f2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"
+                />
+              </svg>
             </a>
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-arrow-left-right.svg"
-                alt="Retweet"
-                class="tweet-action"
-              />8</a
-            >
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-heart.svg"
-                alt="Like"
-                class="tweet-action"
-              />1</a
-            >
-            <a
-              class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
-              href="#"
-              ><img
-                src="assets/img/ic-box-arrow-up.svg"
-                alt="More options"
-                class="tweet-action"
-            /></a>
+          </li>
+          <li class="list-group-item p-3 border-top border-1 trend-item">
+            <div class="d-flex align-items-start justify-content-between">
+              <div class="d-flex flex-column">
+                <span class="text-muted trend-metadata"
+                  >1 &middot; kpop &middot; Trending</span
+                >
+                <a href="#" class="text-reset font-weight-bold"
+                  >#HYLTonINKIGAYO</a
+                >
+              </div>
+              <img src="assets/img/ic-chevron-down.svg" alt="Trend Options" />
+            </div>
+          </li>
+          <li class="list-group-item p-3 border-top border-1 trend-item">
+            <div class="d-flex align-items-start justify-content-between">
+              <div class="d-flex flex-column">
+                <span class="text-muted trend-metadata"
+                  >2 &middot; Trending</span
+                >
+                <a href="#" class="text-reset font-weight-bold"
+                  >#JonaxxORNKab22</a
+                >
+              </div>
+              <img src="assets/img/ic-chevron-down.svg" alt="Trend Options" />
+            </div>
+          </li>
+          <li class="list-group-item p-3 border-top border-1 trend-item">
+            <div class="d-flex align-items-start justify-content-between">
+              <div class="d-flex flex-column">
+                <span class="text-muted trend-metadata"
+                  >3 &middot; Trending</span
+                >
+                <a href="#" class="text-reset font-weight-bold">JS Prom</a>
+              </div>
+              <img src="assets/img/ic-chevron-down.svg" alt="Trend Options" />
+            </div>
+          </li>
+          <li class="list-group-item p-3 border-top border-1 trend-item">
+            <div class="d-flex align-items-start justify-content-between">
+              <div class="d-flex flex-column">
+                <span class="text-muted trend-metadata"
+                  >2 &middot; Music &middot; Trending</span
+                >
+                <a href="#" class="text-reset font-weight-bold">#SSS6thWin</a>
+              </div>
+              <img src="assets/img/ic-chevron-down.svg" alt="Trend Options" />
+            </div>
+          </li>
+          <li class="list-group-item p-3 border-top border-1 trend-item">
+            <div class="d-flex align-items-start justify-content-between">
+              <a href="#">Show More</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Who fo follow -->
+        <ul class="list-group mt-3 trending-list">
+          <li
+            class="list-group-item p-3 border-bottom border-1 who-to-follow-header"
+          >
+            Who to follow
+          </li>
+          <li class="list-group-item p-3 border-top border-1 who-to-follow-item">
+            <div class="d-flex align-items-center">
+              <img src="assets/img/default_profile_400x400.png" class="profile-icon" alt="">
+              <div class="d-flex flex-column ml-2 name">
+                <span class="font-weight-bold">Memeverse</span>
+                <span class="text-muted">@memeverse</span>
+              </div>
+              <button class="btn btn-outline-primary rounded-pill ml-auto py-1 px-3 font-weight-bold">Follow</button>
+            </div>
+          </li>
+          <li class="list-group-item p-3 border-top border-1 who-to-follow-item">
+            <div class="d-flex align-items-center">
+              <img src="assets/img/default_profile_400x400.png" class="profile-icon" alt="">
+              <div class="d-flex flex-column ml-2 name">
+                <span class="font-weight-bold">Web Tinkerer</span>
+                <span class="text-muted">@heywebtinkerer</span>
+              </div>
+              <button class="btn btn-outline-primary rounded-pill ml-auto py-1 px-3 font-weight-bold">Follow</button>
+            </div>
+          </li>
+          <li class="list-group-item p-3 border-top border-1 who-to-follow-item">
+            <div class="d-flex align-items-start justify-content-between">
+              <a href="#">Show More</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Desktop Main Column -->
+      <div id="tweets-feed" class="container center-column">
+        <div
+          id="header-bar"
+          class="sticky-top px-2 py-3 d-none d-lg-flex align-items-center justify-content-between border-bottom border-1"
+        >
+          <span class="header-text">Home</span>
+          <span>
+            <svg viewBox="0 0 24 24" class="content-preference-toggle">
+              <g>
+                <path
+                  d="M22.772 10.506l-5.618-2.192-2.16-6.5c-.102-.307-.39-.514-.712-.514s-.61.207-.712.513l-2.16 6.5-5.62 2.192c-.287.112-.477.39-.477.7s.19.585.478.698l5.62 2.192 2.16 6.5c.102.306.39.513.712.513s.61-.207.712-.513l2.16-6.5 5.62-2.192c.287-.112.477-.39.477-.7s-.19-.585-.478-.697zm-6.49 2.32c-.208.08-.37.25-.44.46l-1.56 4.695-1.56-4.693c-.07-.21-.23-.38-.438-.462l-4.155-1.62 4.154-1.622c.208-.08.37-.25.44-.462l1.56-4.693 1.56 4.694c.07.212.23.382.438.463l4.155 1.62-4.155 1.622zM6.663 3.812h-1.88V2.05c0-.414-.337-.75-.75-.75s-.75.336-.75.75v1.762H1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.782v1.762c0 .414.336.75.75.75s.75-.336.75-.75V5.312h1.88c.415 0 .75-.336.75-.75s-.335-.75-.75-.75zm2.535 15.622h-1.1v-1.016c0-.414-.335-.75-.75-.75s-.75.336-.75.75v1.016H5.57c-.414 0-.75.336-.75.75s.336.75.75.75H6.6v1.016c0 .414.335.75.75.75s.75-.336.75-.75v-1.016h1.098c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"
+                ></path>
+              </g>
+            </svg>
+          </span>
+        </div>
+        <!-- Compose Tweet Panel -->
+        <div class="modal-body d-none d-lg-flex border-bottom border-1">
+          <img
+            class="tweet-profile-icon mr-2 rounded-circle"
+            src="assets/img/default_profile_400x400.png"
+            alt="User Profile Icon"
+          />
+          <div class="flex-grow-1">
+            <textarea
+              name="compose-tweet-body"
+              id="compose-tweet-body"
+              rows="2"
+              class="w-100 py-1 compose-tweet-body border-0"
+              placeholder="What's happening"
+            ></textarea>
+            <div class="d-flex align-items-center mt-2">
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-image.svg"
+                  alt="Attach image"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-gif.svg"
+                  alt="Add animated GIF"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-bar-chart.svg"
+                  alt="Create poll"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+                class="border-0 rounded-circle btn-compose-tweet-advanced"
+              >
+                <img
+                  src="assets/img/ic-calendar-plus.svg"
+                  alt="Schedule tweet"
+                  class="ic-compose-tweet-advanced"
+                />
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary py-2 px-3 rounded-pill font-weight-bold send-tweet-btn ml-auto"
+              >
+                Tweet
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- A Tweet -->
-      <div class="tweet d-flex flex-row align-items-start">
-        <img
-          class="rounded-circle tweet-profile-icon"
-          src="assets/img/rubber-duckie-5233762_960_720.png"
-          alt="User's Profile"
-        />
-        <div class="flex-grow-1 d-flex flex-column ml-3">
-          <div class="d-flex">
-            <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
-              <span
-                class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >rubber duckie</span
+        <div class="py-1 divider d-none d-lg-block"></div>
+        <!-- A Tweet -->
+        <div class="tweet d-flex flex-row align-items-start">
+          <img
+            class="rounded-circle tweet-profile-icon"
+            src="assets/img/default_profile_400x400.png"
+            alt="User's Profile"
+          />
+          <div class="flex-grow-1 d-flex flex-column ml-3">
+            <div class="d-flex">
+              <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
+                <span
+                  class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >Dalos Somnen</span
+                >
+                <span
+                  class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >@dsmnn2020</span
+                ></span
               >
-              <span
-                class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >@produck</span
-              ></span
-            >
-            <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
-            <span class="text-muted flex-shrink-0 mr-2">20m</span>
-            <span class="text-muted flex-shrink-0 ml-auto"
-              ><img src="assets/img/ic-chevron-down.svg" alt="Options"
-            /></span>
-          </div>
-          <div class="my-1">
-            <span>talk to me.</span>
-            <img
-              class="tweet-image"
-              src="assets/img/rubber-duckie-5233762_960_720.png"
-              alt="talk to me."
-            />
-          </div>
-          <div class="d-flex align-items-center justify-content-between">
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-chat.svg"
-                alt="Reply"
-                class="tweet-action"
-              />
-              3</a
-            >
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-arrow-left-right.svg"
-                alt="Retweet"
-                class="tweet-action"
-              />108</a
-            >
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-heart.svg"
-                alt="Like"
-                class="tweet-action"
-              />588</a
-            >
-            <a
-              class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
-              href="#"
-              ><img
-                src="assets/img/ic-box-arrow-up.svg"
-                alt="More options"
-                class="tweet-action"
-            /></a>
+              <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
+              <span class="text-muted flex-shrink-0 mr-2">58s</span>
+              <span class="text-muted flex-shrink-0 ml-auto"
+                ><img src="assets/img/ic-chevron-down.svg" alt="Options"
+              /></span>
+            </div>
+            <div class="my-1">
+              <span>where art thou now?</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-chat.svg"
+                  alt="Reply"
+                  class="tweet-action"
+                />
+              </a>
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-arrow-left-right.svg"
+                  alt="Retweet"
+                  class="tweet-action"
+              /></a>
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-heart.svg"
+                  alt="Like"
+                  class="tweet-action"
+              /></a>
+              <a
+                class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
+                href="#"
+                ><img
+                  src="assets/img/ic-box-arrow-up.svg"
+                  alt="More options"
+                  class="tweet-action"
+              /></a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- A Tweet -->
-      <div class="tweet d-flex flex-row align-items-start">
-        <img
-          class="rounded-circle tweet-profile-icon"
-          src="assets/img/benben.png"
-          alt="User's Profile"
-        />
-        <div class="flex-grow-1 d-flex flex-column ml-3">
-          <div class="d-flex">
-            <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
-              <span
-                class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >benenben</span
+        <!-- A Tweet -->
+        <div class="tweet d-flex flex-row align-items-start">
+          <img
+            class="rounded-circle tweet-profile-icon"
+            src="assets/img/default_profile_400x400.png"
+            alt="User's Profile"
+          />
+          <div class="flex-grow-1 d-flex flex-column ml-3">
+            <div class="d-flex">
+              <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
+                <span
+                  class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >http code guy</span
+                >
+                <span
+                  class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >@httpcodeguy</span
+                ></span
               >
-              <span
-                class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >@benbenmusic</span
-              ></span
-            >
-            <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
-            <span class="text-muted flex-shrink-0 mr-2">38m</span>
-            <span class="text-muted flex-shrink-0 ml-auto"
-              ><img src="assets/img/ic-chevron-down.svg" alt="Options"
-            /></span>
-          </div>
-          <div class="my-1">
-            <span>dami pang gustong sabihin, ngunit 'wag na lang muna</span>
-          </div>
-          <div class="d-flex align-items-center justify-content-between">
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-chat.svg"
-                alt="Reply"
-                class="tweet-action"
+              <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
+              <span class="text-muted flex-shrink-0 mr-2">9m</span>
+              <span class="text-muted flex-shrink-0 ml-auto"
+                ><img src="assets/img/ic-chevron-down.svg" alt="Options"
+              /></span>
+            </div>
+            <div class="my-1">
+              <span>too bad :&lt;</span>
+              <img
+                class="tweet-image"
+                src="assets/img/error-2129569_640.jpg"
+                alt="too bad"
               />
-              4</a
-            >
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-arrow-left-right.svg"
-                alt="Retweet"
-                class="tweet-action"
-              />
-              28</a
-            >
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-heart.svg"
-                alt="Like"
-                class="tweet-action"
-              />
-              193</a
-            >
-            <a
-              class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
-              href="#"
-              ><img
-                src="assets/img/ic-box-arrow-up.svg"
-                alt="More options"
-                class="tweet-action"
-            /></a>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-chat.svg"
+                  alt="Reply"
+                  class="tweet-action"
+                />
+              </a>
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-arrow-left-right.svg"
+                  alt="Retweet"
+                  class="tweet-action"
+                />8</a
+              >
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-heart.svg"
+                  alt="Like"
+                  class="tweet-action"
+                />1</a
+              >
+              <a
+                class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
+                href="#"
+                ><img
+                  src="assets/img/ic-box-arrow-up.svg"
+                  alt="More options"
+                  class="tweet-action"
+              /></a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- A Tweet -->
-      <div class="tweet d-flex flex-row align-items-start">
-        <img
-          class="rounded-circle tweet-profile-icon"
-          src="assets/img/default_profile_400x400.png"
-          alt="User's Profile"
-        />
-        <div class="flex-grow-1 d-flex flex-column ml-3">
-          <div class="d-flex">
-            <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
-              <span
-                class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >Heinrich Austria</span
+        <!-- A Tweet -->
+        <div class="tweet d-flex flex-row align-items-start">
+          <img
+            class="rounded-circle tweet-profile-icon"
+            src="assets/img/rubber-duckie-5233762_960_720.png"
+            alt="User's Profile"
+          />
+          <div class="flex-grow-1 d-flex flex-column ml-3">
+            <div class="d-flex">
+              <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
+                <span
+                  class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >rubber duckie</span
+                >
+                <span
+                  class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >@produck</span
+                ></span
               >
-              <span
-                class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
-                style="white-space: nowrap;"
-                >@heinrich</span
-              ></span
-            >
-            <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
-            <span class="text-muted flex-shrink-0 mr-2">Nov 22, 2019</span>
-            <span class="text-muted flex-shrink-0 ml-auto"
-              ><img src="assets/img/ic-chevron-down.svg" alt="Options"
-            /></span>
-          </div>
-          <div class="my-1">
-            <span>SAIS ano na!</span>
-          </div>
-          <div class="d-flex align-items-center justify-content-between">
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-chat.svg"
-                alt="Reply"
-                class="tweet-action"
+              <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
+              <span class="text-muted flex-shrink-0 mr-2">20m</span>
+              <span class="text-muted flex-shrink-0 ml-auto"
+                ><img src="assets/img/ic-chevron-down.svg" alt="Options"
+              /></span>
+            </div>
+            <div class="my-1">
+              <span>talk to me.</span>
+              <img
+                class="tweet-image"
+                src="assets/img/rubber-duckie-5233762_960_720.png"
+                alt="talk to me."
               />
-              123</a
-            >
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-arrow-left-right.svg"
-                alt="Retweet"
-                class="tweet-action"
-            /></a>
-            <a
-              class="flex-1 text-decoration-none text-muted d-flex align-items-center"
-              href="#"
-              ><img
-                class="mr-2"
-                src="assets/img/ic-heart.svg"
-                alt="Like"
-                class="tweet-action"
-            /></a>
-            <a
-              class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
-              href="#"
-              ><img
-                src="assets/img/ic-box-arrow-up.svg"
-                alt="More options"
-                class="tweet-action"
-            /></a>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-chat.svg"
+                  alt="Reply"
+                  class="tweet-action"
+                />
+                3</a
+              >
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-arrow-left-right.svg"
+                  alt="Retweet"
+                  class="tweet-action"
+                />108</a
+              >
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-heart.svg"
+                  alt="Like"
+                  class="tweet-action"
+                />588</a
+              >
+              <a
+                class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
+                href="#"
+                ><img
+                  src="assets/img/ic-box-arrow-up.svg"
+                  alt="More options"
+                  class="tweet-action"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- A Tweet -->
+        <div class="tweet d-flex flex-row align-items-start">
+          <img
+            class="rounded-circle tweet-profile-icon"
+            src="assets/img/benben.png"
+            alt="User's Profile"
+          />
+          <div class="flex-grow-1 d-flex flex-column ml-3">
+            <div class="d-flex">
+              <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
+                <span
+                  class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >benenben</span
+                >
+                <span
+                  class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >@benbenmusic</span
+                ></span
+              >
+              <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
+              <span class="text-muted flex-shrink-0 mr-2">38m</span>
+              <span class="text-muted flex-shrink-0 ml-auto"
+                ><img src="assets/img/ic-chevron-down.svg" alt="Options"
+              /></span>
+            </div>
+            <div class="my-1">
+              <span>dami pang gustong sabihin, ngunit 'wag na lang muna</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-chat.svg"
+                  alt="Reply"
+                  class="tweet-action"
+                />
+                4</a
+              >
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-arrow-left-right.svg"
+                  alt="Retweet"
+                  class="tweet-action"
+                />
+                28</a
+              >
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-heart.svg"
+                  alt="Like"
+                  class="tweet-action"
+                />
+                193</a
+              >
+              <a
+                class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
+                href="#"
+                ><img
+                  src="assets/img/ic-box-arrow-up.svg"
+                  alt="More options"
+                  class="tweet-action"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- A Tweet -->
+        <div class="tweet d-flex flex-row align-items-start">
+          <img
+            class="rounded-circle tweet-profile-icon"
+            src="assets/img/default_profile_400x400.png"
+            alt="User's Profile"
+          />
+          <div class="flex-grow-1 d-flex flex-column ml-3">
+            <div class="d-flex">
+              <span class="d-flex text-trunctate flex-shrink-1 overflow-hidden">
+                <span
+                  class="font-weight-bold d-inline-block overflow-hidden text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >Heinrich Austria</span
+                >
+                <span
+                  class="d-inline-block text-muted overflow-hidden ml-2 text-overflow-ellipsis flex-shrink-1"
+                  style="white-space: nowrap;"
+                  >@heinrich</span
+                ></span
+              >
+              <span class="text-muted mx-1 flex-shrink-0">&middot;</span>
+              <span class="text-muted flex-shrink-0 mr-2">Nov 22, 2019</span>
+              <span class="text-muted flex-shrink-0 ml-auto"
+                ><img src="assets/img/ic-chevron-down.svg" alt="Options"
+              /></span>
+            </div>
+            <div class="my-1">
+              <span>SAIS ano na!</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-chat.svg"
+                  alt="Reply"
+                  class="tweet-action"
+                />
+                123</a
+              >
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-arrow-left-right.svg"
+                  alt="Retweet"
+                  class="tweet-action"
+              /></a>
+              <a
+                class="flex-1 text-decoration-none text-muted d-flex align-items-center"
+                href="#"
+                ><img
+                  class="mr-2"
+                  src="assets/img/ic-heart.svg"
+                  alt="Like"
+                  class="tweet-action"
+              /></a>
+              <a
+                class="text-decoration-none text-muted d-flex align-items-center justify-content-end"
+                href="#"
+                ><img
+                  src="assets/img/ic-box-arrow-up.svg"
+                  alt="More options"
+                  class="tweet-action"
+              /></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Bottom Nav Bar -->
-    <nav class="nav fixed-bottom nav-pills nav-justified bottom-nav">
+    <nav class="nav fixed-bottom nav-pills nav-justified bottom-nav d-lg-none">
       <a class="nav-item nav-link" href="#"><span class="ic-house"></span></a>
       <a class="nav-item nav-link" href="#"><span class="ic-search"></span></a>
       <a class="nav-item nav-link" href="#"><span class="ic-bell"></span></a>
@@ -656,7 +1128,7 @@
         ><span class="ic-envelope"></span
       ></a>
       <button
-        class="btn-compose-tweet"
+        class="btn-compose-tweet d-lg-none"
         id="btn-compose-tweet"
         data-toggle="modal"
         data-target="#exampleModal"
