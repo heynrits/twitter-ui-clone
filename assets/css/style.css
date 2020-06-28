@@ -350,4 +350,60 @@ span.ic-envelope {
   .divider {
     background-color: #e6ecf0;
   }
+
+  /* Right Column Styles */
+  #search-bar {
+    background-color: #e6ecf0;
+  }
+
+  #search-bar div:first-child span {
+    background-color: transparent;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+    border: 0;
+  }
+  #search-bar input:last-child {
+    background-color: transparent;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    border: 0;
+    
+  }
+
+  .search-input {
+    background-color: #e6ecf0;
+    border: 0;
+  }
+  .search-input:focus {
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #1da1f2
+  }
+  .search-bar::after {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/ic-search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  #search-bar input:last-child.form-control:focus {
+    outline: none;
+    border-color: transparent;
+  }
+
+  span.ic-search {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/ic-search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
