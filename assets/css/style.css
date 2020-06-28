@@ -280,6 +280,8 @@ span.ic-envelope {
     width: 30%;
   }
 
+  /* Left Column Styles */
+
   #logo {
     margin-left: -16px;
   }
@@ -333,5 +335,15 @@ span.ic-envelope {
 
   .sidebar-link-active .sidebar-link-text {
     color: #1da1f2;
+  }
+
+  /* Center Column Styles */
+  .center-column #header-bar {
+    background-color: #fff;
+  }
+
+  .header-text {
+    font-size: 1.2rem;
+    font-weight: 900;
   }
 }
