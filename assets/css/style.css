@@ -338,7 +338,8 @@ span.ic-envelope {
   }
 
   /* Center Column Styles */
-  .center-column #header-bar, .right-column #right-header-bar {
+  .center-column #header-bar,
+  .right-column #right-header-bar {
     background-color: #fff;
   }
 
@@ -367,7 +368,6 @@ span.ic-envelope {
     border-top-right-radius: 50rem;
     border-bottom-right-radius: 50rem;
     border: 0;
-    
   }
 
   .search-input {
@@ -377,7 +377,7 @@ span.ic-envelope {
   .search-input:focus {
     outline: none;
     background-color: #fff;
-    border: 1px solid #1da1f2
+    border: 1px solid #1da1f2;
   }
   .search-bar::after {
     content: '';
@@ -416,12 +416,14 @@ span.ic-envelope {
     background-color: transparent;
   }
 
-  .trend-list-header, .who-to-follow-header {
+  .trend-list-header,
+  .who-to-follow-header {
     font-weight: 900;
     font-size: 1.2rem;
   }
 
-  .trend-item, .who-to-follow-item {
+  .trend-item,
+  .who-to-follow-item {
     cursor: pointer;
   }
   .trend-item:hover {
@@ -429,7 +431,7 @@ span.ic-envelope {
   }
 
   .trend-metadata {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   /* Who to follow */
@@ -444,6 +446,47 @@ span.ic-envelope {
 
   .who-to-follow-item button:hover {
     color: #1da1f2;
-    background: rgba(29, 161, 242, 0.3)
+    background: rgba(29, 161, 242, 0.3);
   }
+}
+
+/* Log in page */
+.login-title {
+  font-weight: 900;
+}
+
+#login-form {
+  width: 95%;
+  max-width: 500px;
+}
+
+.form-field {
+  background-color: #f5f8fa;
+  border-bottom: 2px solid #657786;
+}
+
+.form-field-focus {
+  border-bottom: 2px solid #1da1f2;
+}
+
+.label-active {
+  color: #1da1f2 !important;
+}
+
+.form-field input {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.2rem;
+}
+.form-field input:focus {
+  outline: none;
+}
+
+#btn-login {
+  background-color: #1da1f2;
+}
+
+#btn-login.login-disabled {
+  opacity: 0.5;
+  cursor: default;
 }
